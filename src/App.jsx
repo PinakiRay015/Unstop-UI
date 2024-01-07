@@ -1,9 +1,11 @@
 import React from 'react'
-
+import Side from './Components/Side'
+import Main from './Components/Main'
 const App = () => {
   return (
-    <div>
-      This is the frontend
+    <div className='flex h-screen bg-green-500 gap-3'>
+      <Side/>
+      <Main/>
     </div>
   )
 }
