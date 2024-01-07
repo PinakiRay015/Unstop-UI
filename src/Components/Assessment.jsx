@@ -109,8 +109,8 @@ const Assessment = () => {
                 Total Assessment
               </h4>
               <div className="px-[20px] flex items-center gap-[10px]">
-                <img src="Assets/total-ass.svg" alt="Total Assessment" />
-                <p className="font-bold text-[20px] text-[#1C4980]">34</p>
+                <img src="Assets/link.svg" alt="Total Assessment" />
+                <p className="font-bold text-[20px] text-[#1C4980]">11</p>
               </div>
             </div>
         </div>
