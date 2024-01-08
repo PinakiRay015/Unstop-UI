@@ -1,12 +1,18 @@
 import React from "react";
 import myAssessment from "../Assessment-cards/Assessments";
 const AssmntOverview = () => {
+
+  const assessment = () =>
+  {
+    alert('This is the program')
+  }
+
   return (
     <div className="px-[20px]">
       <p className="font-medium text-[18px] text-[#1C4980]">My Assessment</p>
 
       <div className="w-full h-[209px] flex justify-between mt-[16px]">
-        <div className="w-[420px] border bordedr-[#DADCE0] h-full bg-[#F6F8FA] flex items-center rounded-md px-[16px]">
+        <div onClick={assessment} className="w-[420px] cursor-pointer border bordedr-[#DADCE0] h-full bg-[#F6F8FA] flex items-center rounded-md px-[16px]">
           <div className="text-center">
             <img className="m-auto" src="Assets/plus.svg" alt="" />
             <h4 className="text-[18px] text-[#1C4980] font-medium">
