@@ -1,5 +1,5 @@
 import React from "react";
-
+import myAssessment from "../Assessment-cards/Assessments";
 const AssmntOverview = () => {
   return (
     <div className="px-[20px]">
@@ -20,23 +20,28 @@ const AssmntOverview = () => {
         </div>
 
         {/* mapping of assessment cards */}
+
+        {
+          myAssessment.map((e) =>
+          {
+            return(
         <div className="w-[420px] h-full border bordedr-[#DADCE0] px-[16px] py-[16px] rounded-lg">
           <nav className="flex justify-between">
-            <img src="Assets/bag.svg" alt="" />
+            <img src={e.logo} alt="" />
             <img src="Assets/mini-menu.svg" alt="" />
           </nav>
 
           <h4 className="mt-[10px] font-medium text-[18px] text-[#1C4980] mb-[2px]">
-            Math Assignment
+            {e.name}
           </h4>
           <div className="flex py-1">
             <p className="text-[14px] font-semibold text-[#1C4980] border-r border-[#DADCE0] pr-[10px]">
-              Job
+              {e.title}
             </p>
             <div className="flex gap-[6px] items-center pl-[10px]">
               <img src="Assets/calender.svg" alt="" />
               <p className="text-[12px] font-medium text-[#8DA4BF] w-[91px]">
-                20 Apr 2023
+                {e.date}
               </p>
             </div>
           </div>
@@ -46,11 +51,11 @@ const AssmntOverview = () => {
           <footer className="flex items-center justify-between">
             <div className="flex w-[123px] justify-between">
               <div>
-                <p className="text-[14px] font-semibold text-[#1C4980]">00</p>
+                <p className="text-[14px] font-semibold text-[#1C4980]">{e.duration}</p>
                 <p className="text-[12px] font-medium text-[#1C4980]">Duration</p>
               </div>
               <div>
-                <p className="text-[14px] font-semibold text-[#1C4980]">00</p>
+                <p className="text-[14px] font-semibold text-[#1C4980]">{e.questions}</p>
                 <p className="text-[12px] font-medium text-[#1C4980]">Questions</p>
               </div>
             </div>
@@ -60,10 +65,14 @@ const AssmntOverview = () => {
                 <img src="Assets/link-deep.svg" alt="" />
                 <p>Share</p>
               </div>
-              <img src="Assets/singleUser.svg" alt="" />
+              <img src={e.users} alt="" />
             </div>
           </footer>
         </div>
+            )
+          })
+        }
+
       </div>
     </div>
   );
