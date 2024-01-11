@@ -19,7 +19,7 @@ const Main = () => {
       <AssmntOverview assessment={assessment} />
 
       {/* assessment adding section */}
-      <div className="flex justify-center">
+      <div className={`${popup} flex justify-center`}>
         <div
           className={`absolute top-0 bg-[#FFFFFF] w-[591px] h-fit border border-black rounded-[15px]`}
         >
