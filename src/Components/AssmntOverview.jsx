@@ -5,10 +5,10 @@ const AssmntOverview = ({assessment}) => {
     <div className="px-[20px]">
       <p className="font-medium text-[18px] text-[#1C4980]">My Assessment</p>
 
-      <div className="w-full h-[209px] flex justify-between mt-[16px]">
+      <div className="w-full h-[209px] lg:flex justify-between mt-[16px]">
         <div
           onClick={assessment}
-          className="w-[420px] cursor-pointer border bordedr-[#DADCE0] h-full bg-[#F6F8FA] flex items-center rounded-md px-[16px]"
+          className="lg:w-[420px]  cursor-pointer border bordedr-[#DADCE0] h-full bg-[#F6F8FA] flex items-center rounded-md px-[16px]"
         >
           <div className="text-center">
             <img className="m-auto" src="Assets/plus.svg" alt="" />
@@ -26,7 +26,7 @@ const AssmntOverview = ({assessment}) => {
 
         {myAssessment.map((e) => {
           return (
-            <div className="w-[420px] h-full border bordedr-[#DADCE0] px-[16px] py-[16px] rounded-lg">
+            <div className="lg:w-[420px] h-full border bordedr-[#DADCE0] px-[16px] py-[16px] rounded-lg">
               <nav className="flex justify-between">
                 <img src={e.logo} alt="" />
                 <img src="Assets/mini-menu.svg" alt="" />
