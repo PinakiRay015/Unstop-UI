@@ -10,7 +10,7 @@ const AssmntOverview = ({assessment}) => {
           onClick={assessment}
           className="lg:w-[420px]  cursor-pointer border bordedr-[#DADCE0] h-full bg-[#F6F8FA] flex items-center rounded-md px-[16px]"
         >
-          <div className="text-center">
+          <div className="text-center m-auto">
             <img className="m-auto" src="Assets/plus.svg" alt="" />
             <h4 className="text-[18px] text-[#1C4980] font-medium">
               New Assessment
