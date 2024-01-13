@@ -14,7 +14,7 @@ const Main = () => {
 
   return (
     <div className="bg-white w-full">
-      <Nav />
+      <Nav/>
       <Assessment />
       <AssmntOverview assessment={assessment} />
 
