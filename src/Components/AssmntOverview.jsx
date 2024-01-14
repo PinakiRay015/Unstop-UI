@@ -5,7 +5,7 @@ const AssmntOverview = ({openBtn}) => {
     <div className="px-[20px] lg:mt-0 md:mt-5 sm:mt-5">
       <div className="flex justify-between">
       <p className="font-medium text-[18px] text-[#1C4980]">My Assessment</p>
-      <div className="flex gap-1 lg:hidden">
+      <div className="flex gap-2 lg:hidden">
         <img src="Assets/search.svg" alt="" />
         <img src="Assets/filter.svg" alt="" />
         <img src="Assets/stats.svg" alt="" />
