@@ -20,7 +20,7 @@ const Nav = ({openNav}) => {
       <div className="lg:hidden bg-white w-full absolute left-0 top-16 flex">
         <div className="w-full border-b-2 border-blue-400 h-[60px] flex items-center justify-center">
           <p className="text-[#0073E6] text-[14px] font-medium">
-            My Assessment
+            My Assessments
           </p>
         </div>
         <div className="w-full border-b-2 h-[60px] flex items-center justify-center">
