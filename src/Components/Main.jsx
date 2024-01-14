@@ -3,23 +3,34 @@ import Nav from "../Components/Nav";
 import Assessment from "../Components/Assessment";
 import AssmntOverview from "./AssmntOverview";
 const Main = () => {
-  const [popup, setPopup] = useState("hidden");
-  const assessment = () => {
-    setPopup("block");
+  const [open, setOpen] = useState("hidden");
+  const [openSideNav, setopenSideNav] = useState("hidden")
+  const openBtn = () => {
+    setOpen("block");
   };
 
   const closebtn = () => {
-    setPopup("hidden");
+    setOpen("hidden");
   };
+
+  const openNav = () =>
+  {
+    setopenSideNav("fixed")
+  }
+
+  const closeNav = () =>
+  {
+    setopenSideNav("hidden") 
+  }
 
   return (
     <div className="bg-white w-full">
-      <Nav/>
+      <Nav openNav={openNav} />
       <Assessment />
-      <AssmntOverview assessment={assessment} />
+      <AssmntOverview openBtn={openBtn} />
 
       {/* assessment adding section */}
-      <div className={`${popup} flex justify-center`}>
+      <div className={`${open} flex justify-center`}>
         <div
           className={`absolute top-0 bg-[#FFFFFF] w-[591px] h-fit border border-black rounded-[15px]`}
         >
@@ -87,32 +98,42 @@ const Main = () => {
               {/* skills suggestions */}
               {/* suggestion 1 */}
               <div className="flex flex-wrap gap-[10px] border rounded-t-[8px] border-[#DADCE0] w-full h-[102px] mt-[10px] px-[15px] py-[15px]">
-              <div className="rounded-full px-[8px] py-[6px] bg-[#DDEDFF] flex items-center h-fit gap-2">
-                  <p className="text-[#1C4980] text-[12px] font-medium">UI/UX and Design</p>
+                <div className="rounded-full px-[8px] py-[6px] bg-[#DDEDFF] flex items-center h-fit gap-2">
+                  <p className="text-[#1C4980] text-[12px] font-medium">
+                    UI/UX and Design
+                  </p>
                   <img src="Assets/cross.svg" alt="" />
                 </div>
-                
+
                 {/* suggesion 2 */}
                 <div className="rounded-full px-[8px] py-[6px] bg-[#DDEDFF] flex items-center h-fit gap-2">
-                  <p className="text-[#1C4980] text-[12px] font-medium">No of Question</p>
+                  <p className="text-[#1C4980] text-[12px] font-medium">
+                    No of Question
+                  </p>
                   <img src="Assets/cross.svg" alt="" />
                 </div>
-                
+
                 {/* suggestion 3 */}
                 <div className="rounded-full px-[8px] py-[6px] bg-[#DDEDFF] flex items-center h-fit gap-2">
-                  <p className="text-[#1C4980] text-[12px] font-medium">Web Development</p>
+                  <p className="text-[#1C4980] text-[12px] font-medium">
+                    Web Development
+                  </p>
                   <img src="Assets/cross.svg" alt="" />
                 </div>
 
                 {/* suggestion 4 */}
                 <div className="rounded-full px-[8px] py-[6px] bg-[#DDEDFF] flex items-center h-fit gap-2">
-                  <p className="text-[#1C4980] text-[12px] font-medium">UI/UX and Design</p>
+                  <p className="text-[#1C4980] text-[12px] font-medium">
+                    UI/UX and Design
+                  </p>
                   <img src="Assets/cross.svg" alt="" />
                 </div>
 
                 {/* suggestion 5 */}
                 <div className="rounded-full px-[8px] py-[6px] bg-[#DDEDFF] flex items-center h-fit gap-2">
-                  <p className="text-[#1C4980] text-[12px] font-medium">Web Development</p>
+                  <p className="text-[#1C4980] text-[12px] font-medium">
+                    Web Development
+                  </p>
                   <img src="Assets/cross.svg" alt="" />
                 </div>
               </div>
@@ -137,11 +158,21 @@ const Main = () => {
                 type="text"
               />
             </div>
-            
+
             <div className="px-[30px] py-[20px]">
-            <button className="w-full bg-[#0073E6] text-white py-[10px] rounded-[8px]">Save</button>
+              <button className="w-full bg-[#0073E6] text-white py-[10px] rounded-[8px]">
+                Save
+              </button>
             </div>
           </form>
+        </div>
+      </div>
+
+      {/* side nav section  */}
+      <div className={`${openSideNav} bg-red-400 w-[85vw] h-screen top-0 z-10`}>
+        <div className="flex  justify-between">
+          <p>nav bar</p>
+          <img onClick={closeNav} src="Assets/cross.svg" alt="" />
         </div>
       </div>
     </div>

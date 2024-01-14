@@ -1,13 +1,13 @@
 import React from "react";
 import myAssessment from "../Assessment-cards/Assessments";
-const AssmntOverview = ({assessment}) => {
+const AssmntOverview = ({openBtn}) => {
   return (
     <div className="px-[20px] lg:mt-0 md:mt-5 sm:mt-5">
       <p className="font-medium text-[18px] text-[#1C4980]">My Assessment</p>
 
       <div className="w-full h-[209px] lg:flex justify-between mt-[16px]">
         <div
-          onClick={assessment}
+          onClick={openBtn}
           className="lg:w-[420px]  cursor-pointer border border-dotted mb-[20px] bordedr-[#DADCE0] h-full bg-[#F6F8FA] flex items-center rounded-md px-[16px]"
         >
           <div className="text-center m-auto">
