@@ -169,10 +169,34 @@ const Main = () => {
       </div>
 
       {/* side nav section  */}
-      <div className={`${openSideNav} bg-red-400 w-[85vw] h-screen top-0 z-10`}>
-        <div className="flex  justify-between">
-          <p>nav bar</p>
-          <img onClick={closeNav} src="Assets/cross.svg" alt="" />
+      <div className={`${openSideNav} bg-[#F2F8FE] px-[20px] pt-[40px] w-[85vw] h-screen top-0 z-10`}>
+      <div className="flex items-start h-[36px]  justify-between">
+          <p className="text-[14px] font-medium text-[#1C4980]">Menu</p>
+          <img className="w-4" onClick={closeNav} src="Assets/cross.svg" alt="" />
+        </div>
+        <div className="flex px-[10px] py-[10px] mt-[6px] items-center h-[50px] gap-[8px]">
+          <img onClick={closeNav} src="Assets/dashboard.svg" alt="" />
+          <p className="text-[14px] font-medium text-[#1C4980]">Dashboard</p>
+        </div>
+        <div className="flex px-[10px] bg-[#E5F1FC] rounded-[8px] border-2 border-[#0073E6] py-[10px] mt-[6px] items-center h-[50px] gap-[8px]">
+          <img onClick={closeNav} src="Assets/assessment.svg" alt="" />
+          <p className="text-[14px] font-medium text-[#0073E6]">Assessment</p>
+        </div>
+        <div className="flex px-[10px] py-[10px] mt-[6px] items-center h-[50px] gap-[8px]">
+          <img onClick={closeNav} src="Assets/quiz.svg" alt="" />
+          <p className="text-[14px] font-medium text-[#1C4980]">My Library</p>
+        </div>
+
+        <hr className="border-b border-dotted bg-[#DADCE0] mt-[5px] mb-[5px]" />
+
+        <div className="flex justify-between items-center">
+        <div className="flex px-[10px] py-[10px] mt-[6px] items-center h-[50px] gap-[8px]">
+          <img onClick={closeNav} src="Assets/clip.svg" alt="" />
+          <p className="text-[14px] font-medium text-[#1C4980]">Round Status</p>
+        </div>
+        <p className="text-[10px] font-medium bg-[#FBEBEA] text-[#D63500] border border-[#D63500] w-fit h-fit rounded-full px-4">
+            Admin
+          </p>
         </div>
       </div>
     </div>
