@@ -32,7 +32,7 @@ const Main = () => {
       {/* assessment adding section */}
       <div className={`${open} flex justify-center`}>
         <div
-          className={`absolute top-0 bg-[#FFFFFF] w-[591px] h-fit border border-black rounded-[15px]`}
+          className={`absolute top-0 bg-[#FFFFFF] w-full max-w-screen-md h-fit border border-black rounded-[15px]`}
         >
           <nav className="flex justify-between px-[30px] py-[20px] border-b-2 border-[#DADCE0]">
             <p className="text-[#1C4980] font-semibold text-[20px]">
@@ -97,7 +97,7 @@ const Main = () => {
 
               {/* skills suggestions */}
               {/* suggestion 1 */}
-              <div className="flex flex-wrap gap-[10px] border rounded-t-[8px] border-[#DADCE0] w-full h-[102px] mt-[10px] px-[15px] py-[15px]">
+              <div className="flex flex-wrap gap-[10px] border rounded-t-[8px] border-[#DADCE0] w-full h-fit mt-[10px] px-[15px] py-[15px]">
                 <div className="rounded-full px-[8px] py-[6px] bg-[#DDEDFF] flex items-center h-fit gap-2">
                   <p className="text-[#1C4980] text-[12px] font-medium">
                     UI/UX and Design
