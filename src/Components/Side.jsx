@@ -2,7 +2,7 @@ import React from "react";
 
 const Side = () => {
   return (
-    <div className="hidden md:block bg-white w-[140px] py-3">
+    <div className="hidden lg:block bg-white w-[140px] py-3">
       <div className="w-[90px] m-auto">
         <div className="leading-6 my-4 py-1">
           <img className="m-auto" src="Assets/dashboard.svg" alt="" />

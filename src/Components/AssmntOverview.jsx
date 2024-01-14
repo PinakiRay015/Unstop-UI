@@ -2,7 +2,7 @@ import React from "react";
 import myAssessment from "../Assessment-cards/Assessments";
 const AssmntOverview = ({assessment}) => {
   return (
-    <div className="px-[20px]">
+    <div className="px-[20px] lg:mt-0 md:mt-5 sm:mt-5">
       <p className="font-medium text-[18px] text-[#1C4980]">My Assessment</p>
 
       <div className="w-full h-[209px] lg:flex justify-between mt-[16px]">
