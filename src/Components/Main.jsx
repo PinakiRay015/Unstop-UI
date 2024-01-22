@@ -33,7 +33,7 @@ const Main = () => {
         <div
           className={`${open} posAdjust absolute top-0 bg-[#FFFFFF] w-full max-w-screen-md h-fit border border-black rounded-[15px]`}
         >
-          <nav className="flex justify-between px-[30px] py-[20px] border-b-2 border-[#DADCE0]">
+          <nav className="flex bg-[#FFFFFF] justify-between px-[30px] py-[20px] border-b-2 border-[#DADCE0] sticky z-10 top-0 w-full">
             <p className="text-[#1C4980] font-semibold text-[20px]">
               Create new assessment
             </p>
@@ -158,7 +158,7 @@ const Main = () => {
               />
             </div>
 
-            <div className="px-[30px] py-[20px]">
+            <div className="sticky bottom-0 bg-[#FFFFFF] px-[30px] py-[20px]">
               <button className="w-full bg-[#0073E6] text-white py-[10px] rounded-[8px]">
                 Save
               </button>
