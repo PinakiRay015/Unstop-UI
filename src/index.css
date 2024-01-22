@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.posAdjust
+{
+    top: 50%;
+    left: 60%;
+    transform: translate(-60% , -50%);
+}

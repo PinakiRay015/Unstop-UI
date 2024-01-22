@@ -29,10 +29,9 @@ const Main = () => {
       <Assessment />
       <AssmntOverview openBtn={openBtn} />
 
-      {/* assessment adding section */}
-      <div className={`${open} flex justify-center`}>
+      {/* assessment adding section {Here i added a class posAdjust to adjust the position of the add assement div. The adjusted code is in the index.css} */}
         <div
-          className={`absolute top-0 bg-[#FFFFFF] w-full max-w-screen-md h-fit border border-black rounded-[15px]`}
+          className={`${open} posAdjust absolute top-0 bg-[#FFFFFF] w-full max-w-screen-md h-fit border border-black rounded-[15px]`}
         >
           <nav className="flex justify-between px-[30px] py-[20px] border-b-2 border-[#DADCE0]">
             <p className="text-[#1C4980] font-semibold text-[20px]">
@@ -166,7 +165,7 @@ const Main = () => {
             </div>
           </form>
         </div>
-      </div>
+
 
       {/* side nav section  */}
       <div className={`${openSideNav} bg-[#F2F8FE] px-[20px] pt-[40px] w-[85vw] h-screen top-0 z-10`}>
