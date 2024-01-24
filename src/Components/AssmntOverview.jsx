@@ -1,36 +1,31 @@
-import React , {useState} from "react";
+import React, { useState } from "react";
 import myAssessment from "../Assessment-cards/Assessments";
-const AssmntOverview = ({openBtn}) => {
-
-  const [toggleOpen, SettoggleOpen] = useState(false)
-  const openStats = () =>
-  {
-      SettoggleOpen(!toggleOpen)
-  }
+const AssmntOverview = ({ openBtn }) => {
+  const [toggleOpen, SettoggleOpen] = useState("h-[0px]");
+  const openStats = () => {
+    SettoggleOpen((prev) => (prev === "h-[0px]" ? "h-[274px]" : "h-[0px]"));
+  };
   return (
     <div className="px-[20px] lg:mt-0 md:mt-5 sm:mt-5">
-      <div className="flex justify-between">
-      <p className="font-medium text-[18px] text-[#1C4980]">My Assessment</p>
-      <div className="flex gap-2 lg:hidden">
-        <img src="Assets/search.svg" alt="" />
-        <img src="Assets/filter.svg" alt="" />
-        <img onClick={openStats} src="Assets/stats.svg" alt="" />
-      </div>
-      </div>
-
       {/* assessment's stats for mobile view */}
 
-      <div className={`lg:hidden ${toggleOpen ? 'block' : 'hidden'} h-[274px] w-full bg-[#F6F8FA] rounded-[12px] `}>
+      <div
+        className={`transition-height duration-300 transform ${toggleOpen} lg:hidden overflow-y-auto w-full bg-[#F6F8FA] rounded-[12px] md-4]`}
+      >
         <div className="flex gap-[1px]">
           <div className="w-full border-r border-b border-black pl-2 py-[10px]">
-            <h4 className="text-[14px] font-medium text-[#1C4980]">Total Assessment</h4>
+            <h4 className="text-[14px] font-medium text-[#1C4980]">
+              Total Assessment
+            </h4>
             <div className="mt-[10px] flex gap-[5px] items-center">
               <img src="Assets/total-ass.svg" alt="" />
               <p className="font-semibold text-[16px] text-[#1C4980]">34</p>
             </div>
           </div>
           <div className="w-full border-l border-b border-black pl-2 py-[10px]">
-            <h4 className="text-[14px] font-medium text-[#1C4980]">Total Purpose</h4>
+            <h4 className="text-[14px] font-medium text-[#1C4980]">
+              Total Purpose
+            </h4>
             <div className="mt-[10px] flex gap-[5px] items-center">
               <img src="Assets/link.svg" alt="" />
               <p className="font-semibold text-[16px] text-[#1C4980]">11</p>
@@ -38,75 +33,90 @@ const AssmntOverview = ({openBtn}) => {
           </div>
         </div>
         <div className="border-b border-t border-black mt-[1px] px-2 py-[10px]">
-        <h4 className="text-[14px] font-medium text-[#1C4980]">Candidates</h4>
-        <div className="flex gap-[5px] items-center mt-[10px]">
-                <img src="Assets/candidate.svg" alt="Total Assessment" />
-                <div>
-                  <div className="flex items-center gap-1">
-                    <p className="font-semibold text-[16px] text-[#1C4980]">
-                      11,145
-                    </p>
-                    <span className="text-[#05C165] text-[10px] font-medium">
-                      +89
-                    </span>
-                  </div>
-                  <p className="font-medium text-[10px] text-[#1C4980]">Total Candidate</p>
-                </div>
-
-                <div className="border-l ml-[5px] border-[#DADCE0] pl-[10px]">
-                  <div className="flex items-center gap-1">
-                    <p className="font-semibold text-[16px] text-[#1C4980]">
-                      1,14
-                    </p>
-                    <span className="text-[#05C165] text-[10px] font-medium">
-                      +89
-                    </span>
-                  </div>
-                  <p className="font-medium text-[10px] text-[#1C4980]">Who Attamped</p>
-                </div>
+          <h4 className="text-[14px] font-medium text-[#1C4980]">Candidates</h4>
+          <div className="flex gap-[5px] items-center mt-[10px]">
+            <img src="Assets/candidate.svg" alt="Total Assessment" />
+            <div>
+              <div className="flex items-center gap-1">
+                <p className="font-semibold text-[16px] text-[#1C4980]">
+                  11,145
+                </p>
+                <span className="text-[#05C165] text-[10px] font-medium">
+                  +89
+                </span>
               </div>
+              <p className="font-medium text-[10px] text-[#1C4980]">
+                Total Candidate
+              </p>
+            </div>
+
+            <div className="border-l ml-[5px] border-[#DADCE0] pl-[10px]">
+              <div className="flex items-center gap-1">
+                <p className="font-semibold text-[16px] text-[#1C4980]">1,14</p>
+                <span className="text-[#05C165] text-[10px] font-medium">
+                  +89
+                </span>
+              </div>
+              <p className="font-medium text-[10px] text-[#1C4980]">
+                Who Attamped
+              </p>
+            </div>
+          </div>
         </div>
         <div className="border-t border-black mt-[1px] pl-2 pt-2">
-        <h4 className="text-[14px] font-medium text-[#1C4980]">Candidates Source</h4>
-        <div className="flex gap-[5px] items-center mt-[10px]">
-                <img src="Assets/globe.svg" alt="Total Assessment" />
-                <div>
-                  <div className="flex items-center gap-1">
-                    <p className="font-semibold text-[16px] text-[#1C4980]">
-                      11,000
-                    </p>
-                    <span className="text-[#05C165] text-[10px] font-medium">
-                      +89
-                    </span>
-                  </div>
-                  <p className="font-medium text-[10px] text-[#1C4980]">E-mail</p>
-                </div>
-
-                <div className="border-l  border-[#DADCE0]">
-                  <div className="flex items-center gap-1">
-                    <p className="font-semibold text-[16px] text-[#1C4980]">
-                      11,000
-                    </p>
-                    <span className="text-[#05C165] text-[10px] font-medium">
-                      +89
-                    </span>
-                  </div>
-                  <p className="font-medium text-[10px] text-[#1C4980]">Social Share</p>
-                </div>
-
-                
-                <div className="border-l  border-[#DADCE0]">
-                  <div className="flex items-center gap-1">
-                    <p className="font-semibold text-[16px] text-[#1C4980]">
-                      11,000
-                    </p>
-                    <span className="text-[#05C165] text-[10px] font-medium">
-                      +89
-                    </span>
-                  </div>
-                  <p className="font-medium text-[10px] text-[#1C4980]">Unique Link</p>
-                </div>
+          <h4 className="text-[14px] font-medium text-[#1C4980]">
+            Candidates Source
+          </h4>
+          <div className="flex gap-[5px] items-center mt-[10px]">
+            <img src="Assets/globe.svg" alt="Total Assessment" />
+            <div>
+              <div className="flex items-center gap-1">
+                <p className="font-semibold text-[16px] text-[#1C4980]">
+                  11,000
+                </p>
+                <span className="text-[#05C165] text-[10px] font-medium">
+                  +89
+                </span>
               </div>
+              <p className="font-medium text-[10px] text-[#1C4980]">E-mail</p>
+            </div>
+
+            <div className="border-l  border-[#DADCE0]">
+              <div className="flex items-center gap-1">
+                <p className="font-semibold text-[16px] text-[#1C4980]">
+                  11,000
+                </p>
+                <span className="text-[#05C165] text-[10px] font-medium">
+                  +89
+                </span>
+              </div>
+              <p className="font-medium text-[10px] text-[#1C4980]">
+                Social Share
+              </p>
+            </div>
+
+            <div className="border-l  border-[#DADCE0]">
+              <div className="flex items-center gap-1">
+                <p className="font-semibold text-[16px] text-[#1C4980]">
+                  11,000
+                </p>
+                <span className="text-[#05C165] text-[10px] font-medium">
+                  +89
+                </span>
+              </div>
+              <p className="font-medium text-[10px] text-[#1C4980]">
+                Unique Link
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="flex justify-between">
+        <p className="font-medium text-[18px] text-[#1C4980]">My Assessment</p>
+        <div className="flex gap-2 lg:hidden">
+          <img src="Assets/search.svg" alt="" />
+          <img src="Assets/filter.svg" alt="" />
+          <img onClick={openStats} src="Assets/stats.svg" alt="" />
         </div>
       </div>
 
