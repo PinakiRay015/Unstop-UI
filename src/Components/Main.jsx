@@ -4,7 +4,7 @@ import Assessment from "../Components/Assessment";
 import AssmntOverview from "./AssmntOverview";
 const Main = () => {
   const [open, setOpen] = useState("hidden");
-  const [openSideNav, setopenSideNav] = useState("hidden")
+  const [openSideNav, setopenSideNav] = useState("translate-x-[-100%]")
   const openBtn = () => {
     setOpen("block");
   };
@@ -15,12 +15,12 @@ const Main = () => {
 
   const openNav = () =>
   {
-    setopenSideNav("fixed")
+    setopenSideNav("translate-x-[0%]")
   }
 
   const closeNav = () =>
   {
-    setopenSideNav("hidden") 
+    setopenSideNav("translate-x-[-100%]") 
   }
 
   return (
@@ -168,7 +168,7 @@ const Main = () => {
 
 
       {/* side nav section  */}
-      <div className={`${openSideNav} bg-[#F2F8FE] px-[20px] pt-[40px] w-[85vw] h-screen top-0 z-10`}>
+      <div className={`${openSideNav} fixed bg-[#F2F8FE] px-[20px] pt-[40px] w-[85vw] h-screen top-0 z-10 transition-transform duration-300 transform`}>
       <div className="flex items-start h-[36px]  justify-between">
           <p className="text-[14px] font-medium text-[#1C4980]">Menu</p>
           <img className="w-4" onClick={closeNav} src="Assets/cross.svg" alt="" />
