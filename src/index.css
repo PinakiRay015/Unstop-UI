@@ -9,6 +9,13 @@
     transform: translate(-60% , -50%);
 }
 
+.myButton
+{
+    position: sticky;
+    bottom: 0px;
+}
+
+
 @media (max-width:610px)
 {
     .posAdjust
