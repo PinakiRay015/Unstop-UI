@@ -2,7 +2,7 @@ import React from "react";
 
 const Nav = ({openNav}) => {
   return (
-    <div className="border-b sticky top-0 lg:bg-green-300 md:bg-red-300 sm:bg-blue-300 border-zinc-300 h-[70px] flex items-center px-[20px]">
+    <div className="border-b fixed lg:sticky w-full top-0 lg:bg-green-300 md:bg-red-300 sm:bg-blue-300 border-zinc-300 h-[70px] flex items-center px-[20px]">
       <div className="flex items-center justify-between w-full h-full">
         <div className="flex items-center">
           <div className="flex gap-2">

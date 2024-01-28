@@ -6,14 +6,14 @@ const AssmntOverview = ({ openBtn }) => {
     SettoggleOpen((prev) => (prev === "h-[0px]" ? "h-[274px]" : "h-[0px]"));
   };
   return (
-    <div className="px-[20px] lg:mt-0 md:mt-5 sm:mt-5">
+    <div className="px-[20px] lg:mt-0 md:mt-24 sm:mt-24">
       {/* assessment's stats for mobile view */}
 
       <div
-        className={`transition-height duration-300 transform ${toggleOpen} lg:hidden overflow-y-auto w-full bg-[#F6F8FA] rounded-[12px] md-4]`}
+        className={`transition-height border border-[#DADCE0] duration-300 transform ${toggleOpen} lg:hidden overflow-y-auto w-full bg-[#F6F8FA] rounded-[12px] md-4]`}
       >
         <div className="flex gap-[1px]">
-          <div className="w-full border-r border-b border-black pl-2 py-[10px]">
+          <div className="w-full border-r border-[#DADCE0] pl-2 py-[10px]">
             <h4 className="text-[14px] font-medium text-[#1C4980]">
               Total Assessment
             </h4>
@@ -22,7 +22,7 @@ const AssmntOverview = ({ openBtn }) => {
               <p className="font-semibold text-[16px] text-[#1C4980]">34</p>
             </div>
           </div>
-          <div className="w-full border-l border-b border-black pl-2 py-[10px]">
+          <div className="w-full  pl-2 py-[10px]">
             <h4 className="text-[14px] font-medium text-[#1C4980]">
               Total Purpose
             </h4>
@@ -32,7 +32,7 @@ const AssmntOverview = ({ openBtn }) => {
             </div>
           </div>
         </div>
-        <div className="border-b border-t border-black mt-[1px] px-2 py-[10px]">
+        <div className="border-t border-[#DADCE0] mt-[1px] px-2 py-[10px]">
           <h4 className="text-[14px] font-medium text-[#1C4980]">Candidates</h4>
           <div className="flex gap-[5px] items-center mt-[10px]">
             <img src="Assets/candidate.svg" alt="Total Assessment" />
@@ -63,7 +63,7 @@ const AssmntOverview = ({ openBtn }) => {
             </div>
           </div>
         </div>
-        <div className="border-t border-black mt-[1px] pl-2 pt-2">
+        <div className="border-t border-[#DADCE0] mt-[1px] pl-2 pt-2">
           <h4 className="text-[14px] font-medium text-[#1C4980]">
             Candidates Source
           </h4>
@@ -120,7 +120,7 @@ const AssmntOverview = ({ openBtn }) => {
         </div>
       </div>
 
-      <div className="w-full h-[209px] lg:flex justify-between mt-[16px]">
+      <div className="w-full h-[209px] lg:flex justify-between mt-[16px] flex-wrap">
         <div
           onClick={openBtn}
           className="lg:w-[420px]  cursor-pointer border border-dotted mb-[20px] bordedr-[#DADCE0] h-full bg-[#F6F8FA] flex items-center rounded-md px-[16px]"

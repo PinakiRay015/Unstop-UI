@@ -6,7 +6,10 @@
 {
     top: 60%;
     left: 60%;
-    /* transform: translate(-60% , -50%); */
+    bottom: 0px;
+    position: fixed;
+    height: 98vh;
+    
 }
 
 .myButton
@@ -20,8 +23,7 @@
 {
     .posAdjust
     {
-        top: 55%;
         overflow-y: auto;
-        height: 85vh;
+        height: 90vh;
     }
 }

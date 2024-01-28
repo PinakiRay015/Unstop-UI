@@ -9,7 +9,7 @@ const Main = () => {
   const openBtn = () => {
     setFormVisible(true);
     setTimeout(() => {
-    setOpen("-translate-y-[50%]");
+    setOpen("-translate-y-[60%]");
     }, 0);
   };
 
@@ -36,7 +36,7 @@ const Main = () => {
 
       {/* assessment adding section {Here i added a class posAdjust to adjust the position of the add assement div. The adjusted code is in the index.css} */}
       <div
-        className={`${open} transition-all duration-300 ease-in posAdjust absolute translate-x-[-60%] bg-[#FFFFFF] w-full max-w-screen-md h-fit overflow-y-auto border border-black rounded-[15px] `} 
+        className={`${open} transition-all duration-300 ease-in posAdjust translate-x-[-60%] bg-[#FFFFFF] w-full max-w-screen-md h-fit overflow-y-auto border border-black rounded-[15px] `} 
         style={{ display: formVisible ? 'block' : 'none' }}
       >
         <nav className="flex bg-[#FFFFFF] justify-between px-[30px] py-[20px] border-b-2 border-[#DADCE0] sticky z-10 top-0 w-full">
