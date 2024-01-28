@@ -4,10 +4,10 @@ const Assessment = () => {
   return (
     <div className="px-[20px] py-[20px]">
       <div className="flex flex-col gap-[16px]">
-        <h4 className="text-[18px] text-[#1C4980] font-medium">
+        <h4 className="hidden lg:block text-[18px] text-[#1C4980] font-medium">
           Assessments Overview
         </h4>
-        <div className="w-full h-[114px] border border-[#DADCE0] rounded-[12px] flex">
+        <div className="hidden w-full h-[114px] border border-[#DADCE0] rounded-[12px] lg:flex">
           {/* Total assessment */}
           <div className="border-r border-[#DADCE0] w-[162px] h-full">
             <div>

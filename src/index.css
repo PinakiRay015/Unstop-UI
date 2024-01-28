@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.posAdjust
+{
+    top: 60%;
+    left: 60%;
+    /* transform: translate(-60% , -50%); */
+}
+
+.myButton
+{
+    position: sticky;
+    bottom: 0px;
+}
+
+
+@media (max-width:610px)
+{
+    .posAdjust
+    {
+        top: 55%;
+        overflow-y: auto;
+        height: 85vh;
+    }
+}
