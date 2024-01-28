@@ -168,7 +168,7 @@ const Main = () => {
 
 
       {/* side nav section  */}
-      <div className={`${openSideNav} fixed bg-[#F2F8FE] px-[20px] pt-[40px] w-[85vw] h-screen top-0 z-10 transition-transform duration-300 transform`}>
+      <div className={`${openSideNav} lg:hidden fixed bg-[#F2F8FE] px-[20px] pt-[40px] w-[85vw] h-screen top-0 z-10 transition-transform duration-300 transform`}>
       <div className="flex items-start h-[36px]  justify-between">
           <p className="text-[14px] font-medium text-[#1C4980]">Menu</p>
           <img className="w-4" onClick={closeNav} src="Assets/cross.svg" alt="" />
