@@ -2,15 +2,18 @@ import React, { useState } from "react";
 import myAssessment from "../Assessment-cards/Assessments";
 const AssmntOverview = ({ openBtn }) => {
   const [toggleOpen, SettoggleOpen] = useState("h-[0px]");
+  const [border, setBorder] = useState("border-none")
   const openStats = () => {
     SettoggleOpen((prev) => (prev === "h-[0px]" ? "h-[274px]" : "h-[0px]"));
+    setBorder((prev) => (prev) === "border-none" ? "border border-[#DADCE0]" : "border-none")
+
   };
   return (
     <div className="px-[20px] lg:mt-0 md:mt-24 sm:mt-24">
       {/* assessment's stats for mobile view */}
 
       <div
-        className={`transition-height border border-[#DADCE0] duration-300 transform ${toggleOpen} lg:hidden overflow-y-auto w-full bg-[#F6F8FA] rounded-[12px] md-4]`}
+        className={`transition-height duration-300 transform ${toggleOpen} ${border} lg:hidden overflow-y-auto w-full bg-[#F6F8FA] rounded-[12px] md-4]`}
       >
         <div className="flex gap-[1px]">
           <div className="w-full border-r border-[#DADCE0] pl-2 py-[10px]">
@@ -111,7 +114,8 @@ const AssmntOverview = ({ openBtn }) => {
           </div>
         </div>
       </div>
-      <div className="flex justify-between">
+
+      <div className="flex justify-between mt-4">
         <p className="font-medium text-[18px] text-[#1C4980]">My Assessment</p>
         <div className="flex gap-2 lg:hidden">
           <img src="Assets/search.svg" alt="" />
