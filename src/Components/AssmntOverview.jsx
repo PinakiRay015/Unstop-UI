@@ -3,9 +3,12 @@ import myAssessment from "../Assessment-cards/Assessments";
 const AssmntOverview = ({ openBtn }) => {
   const [toggleOpen, SettoggleOpen] = useState("h-[0px]");
   const [border, setBorder] = useState("border-none")
+  const [statsImage, SetstatsImage] = useState(false)
+
   const openStats = () => {
     SettoggleOpen((prev) => (prev === "h-[0px]" ? "h-[274px]" : "h-[0px]"));
     setBorder((prev) => (prev) === "border-none" ? "border border-[#DADCE0]" : "border-none")
+    SetstatsImage(!statsImage)
 
   };
   return (
@@ -115,12 +118,12 @@ const AssmntOverview = ({ openBtn }) => {
         </div>
       </div>
 
-      <div className="flex justify-between mt-4">
+      <div className="flex justify-between mt-4 items-center">
         <p className="font-medium text-[18px] text-[#1C4980]">My Assessment</p>
-        <div className="flex gap-2 lg:hidden">
+        <div className="flex lg:hidden">
           <img src="Assets/search.svg" alt="" />
           <img src="Assets/filter.svg" alt="" />
-          <img onClick={openStats} src="Assets/stats.svg" alt="" />
+          <img onClick={openStats} src={statsImage ? "Assets/stats2.svg" : "Assets/stats1.svg"} alt="" />
         </div>
       </div>
 
