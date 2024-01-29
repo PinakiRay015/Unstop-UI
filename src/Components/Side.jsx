@@ -2,8 +2,8 @@ import React from "react";
 
 const Side = () => {
   return (
-    <div className="hidden lg:flex justify-center bg-white w-[140px] py-3 ">
-      <div className="w-[90px] m-auto fixed top-6">
+    <div className="hidden lg:block bg-white fixed h-screen top-0 w-[140px] py-3">
+      <div className="w-[90px] m-auto">
         <div className="leading-6 my-4 py-1">
           <img className="m-auto" src="Assets/dashboard.svg" alt="" />
           <p className="font-medium text-[12px] text-[#1C4980] text-center">

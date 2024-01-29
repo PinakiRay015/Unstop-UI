@@ -29,7 +29,7 @@ const Main = () => {
   };
 
   return (
-    <div className="bg-white w-full">
+    <div className="bg-white w-full lg:ml-36">
       <Nav openNav={openNav} />
       <Assessment />
       <AssmntOverview openBtn={openBtn} />
