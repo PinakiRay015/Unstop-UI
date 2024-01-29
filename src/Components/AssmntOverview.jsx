@@ -1,10 +1,22 @@
+//This is the "List of assessments" component.
+
 import React, { useState } from "react";
 import myAssessment from "../Assessment-cards/Assessments";
 const AssmntOverview = ({ openBtn }) => {
+
+  // I used 3 use states here to perform 3 different UI interaction activities.
+
+  //This one for toggling the assessment stats of user. The targeted animation was like when the button will pressed it will appear below the nav bar in an increasing height towards down upto some height. For this i first set the state as "h-[0px]" andon changing state i set as "h-[274px]"
   const [toggleOpen, SettoggleOpen] = useState("h-[0px]");
+
+  //This one for visibility of the user assessment stats. This was need to be done because when the height was zero the border was still visible which was not looking nice. That's i used this to make the border only visible when the stats was opened.
   const [border, setBorder] = useState("border-none")
+
+  //This is one for toggle the open stats button.
   const [statsImage, SetstatsImage] = useState(false)
 
+
+  //This function to used to handle the opening of stats , border of the stats and the image of the stats button
   const openStats = () => {
     SettoggleOpen((prev) => (prev === "h-[0px]" ? "h-[274px]" : "h-[0px]"));
     setBorder((prev) => (prev) === "border-none" ? "border border-[#DADCE0]" : "border-none")
@@ -13,12 +25,13 @@ const AssmntOverview = ({ openBtn }) => {
   };
   return (
     <div className="px-[20px] lg:mt-0 md:mt-24 sm:mt-24">
-      {/* assessment's stats for mobile view */}
-
+      {/* assessment's stats for mobile view. I add the animation "transition-height duration-300 transform" for smooth Increasing and decreasing height on toggle.*/}
       <div
         className={`transition-height duration-300 transform ${toggleOpen} ${border} lg:hidden overflow-y-auto w-full bg-[#F6F8FA] rounded-[12px] md-4]`}
       >
         <div className="flex gap-[1px]">
+
+          {/* Total assessment section  */}
           <div className="w-full border-r border-[#DADCE0] pl-2 py-[10px]">
             <h4 className="text-[14px] font-medium text-[#1C4980]">
               Total Assessment
@@ -28,6 +41,8 @@ const AssmntOverview = ({ openBtn }) => {
               <p className="font-semibold text-[16px] text-[#1C4980]">34</p>
             </div>
           </div>
+
+          {/* Total purpose section  */}
           <div className="w-full  pl-2 py-[10px]">
             <h4 className="text-[14px] font-medium text-[#1C4980]">
               Total Purpose
@@ -38,6 +53,8 @@ const AssmntOverview = ({ openBtn }) => {
             </div>
           </div>
         </div>
+
+        {/* candidates section  */}
         <div className="border-t border-[#DADCE0] mt-[1px] px-2 py-[10px]">
           <h4 className="text-[14px] font-medium text-[#1C4980]">Candidates</h4>
           <div className="flex gap-[5px] items-center mt-[10px]">
@@ -69,6 +86,8 @@ const AssmntOverview = ({ openBtn }) => {
             </div>
           </div>
         </div>
+
+          {/* candidate score section  */}
         <div className="border-t border-[#DADCE0] mt-[1px] pl-2 pt-2">
           <h4 className="text-[14px] font-medium text-[#1C4980]">
             Candidates Source
@@ -118,15 +137,21 @@ const AssmntOverview = ({ openBtn }) => {
         </div>
       </div>
 
+          {/* User assessment stats header*/}
+
       <div className="flex justify-between mt-4 items-center">
         <p className="font-medium text-[18px] text-[#1C4980]">My Assessment</p>
         <div className="flex lg:hidden">
           <img src="Assets/search.svg" alt="" />
           <img src="Assets/filter.svg" alt="" />
+
+          {/* user assessment view button*/}
           <img onClick={openStats} src={statsImage ? "Assets/stats2.svg" : "Assets/stats1.svg"} alt="" />
         </div>
       </div>
 
+
+          {/* Addding of Assessment button section  */}
       <div className="w-full h-[209px] lg:flex justify-between mt-[16px] flex-wrap">
         <div
           onClick={openBtn}
@@ -144,7 +169,9 @@ const AssmntOverview = ({ openBtn }) => {
           </div>
         </div>
 
-        {/* mapping of assessment cards */}
+        {/* mapping of assessment cards. As all the cards looks similar i created the array of objects which are required inside the card and used mapping of array for tranversing all the elements and putting those elements in their respected position. By doing this i don't have to create multiple cards. If a new object is created inside the array a new card will get added for which the same code is REUSABLE*/}
+
+        {/* The array is located inside the forlder named Assessment-cards which is inside the Src folder */}
 
         {myAssessment.map((e) => {
           return (

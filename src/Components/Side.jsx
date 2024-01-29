@@ -3,7 +3,11 @@ import React from "react";
 const Side = () => {
   return (
     <div className="hidden lg:block bg-white fixed h-screen top-0 w-[140px] py-3">
+
+      {/* side nav items */}
       <div className="w-[90px] m-auto">
+        
+        {/* Dashboard section  */}
         <div className="leading-6 my-4 py-1">
           <img className="m-auto" src="Assets/dashboard.svg" alt="" />
           <p className="font-medium text-[12px] text-[#1C4980] text-center">
@@ -11,6 +15,7 @@ const Side = () => {
           </p>
         </div>
 
+        {/* Assessment section */}
         <div className="leading-6 my-4 ring-1 ring-[#0073E6] bg-[#E5F1FC] py-3 rounded-md">
           <img className="m-auto" src="Assets/assessment.svg" alt="" />
           <p className="font-medium text-[12px] text-[#0073E6] text-center">
@@ -18,6 +23,7 @@ const Side = () => {
           </p>
         </div>
 
+        {/* library section */}
         <div className="leading-6 my-4 py-3 mb-6">
           <img className="m-auto" src="Assets/quiz.svg" alt="" />
           <p className="font-medium text-[12px] text-[#1C4980] text-center">
@@ -27,6 +33,7 @@ const Side = () => {
 
         <hr className="border border-dotted border-[#C2D2DA]" />
 
+        {/* Admin section  */}
         <div className="leading-6 my-4">
           <p className="m-auto text-[10px] font-medium bg-[#FBEBEA] text-[#D63500] border border-[#D63500] w-fit h-fit rounded-full px-4">
             Admin

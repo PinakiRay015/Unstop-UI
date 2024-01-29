@@ -1,3 +1,5 @@
+//This is the User stats or score section. 
+
 import React from "react";
 
 const Assessment = () => {
