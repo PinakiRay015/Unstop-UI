@@ -7,14 +7,15 @@ const Nav = ({openNav}) => {
         <div className="flex items-center">
           <div className="flex gap-2">
             <img onClick={openNav} className="lg:hidden" src="Assets/menu.svg" alt="" />
-          <h3 className="font-semibold text-[20px] text-[#1C4980] border-r-2 border-zinc-300 h-ful pr-3 py-3">
+          <h3 className="font-semibold text-[20px] text-[#1C4980] lg:border-r-2 border-zinc-300 h-ful pr-3 py-3">
             Assessment
           </h3>
           </div>
           <h4 className="hidden lg:block font-semibold text-[14px] border-b-2 border-[#0073E6] text-[#0073E6] ml-3 py-6">My Assessment</h4>
         </div>
         <div>
-          <img src="Assets/phone.svg" alt="" />
+          <img className="hidden lg:block" src="Assets/phone.svg" alt="" />
+          <img className="lg:hidden" src="Assets/laptop.svg" alt="" />
         </div>
       </div>
       <div className="lg:hidden bg-white w-full absolute left-0 top-16 flex">
