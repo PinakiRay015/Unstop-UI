@@ -40,13 +40,22 @@ const Main = () => {
         style={{ display: formVisible ? 'block' : 'none' }}
       >
         <nav className="flex bg-[#FFFFFF] justify-between px-[30px] py-[20px] border-b-2 border-[#DADCE0] sticky z-10 top-0 w-full">
-          <p className="text-[#1C4980] font-semibold text-[20px]">
+        <p className="text-[#1C4980] font-semibold text-[20px] hidden lg:block">
             Create new assessment
           </p>
+          <p className="text-[#1C4980] font-semibold text-[20px] lg:hidden">
+            Sub-Section Details
+          </p>
           <img
-            className="cursor-pointer"
+            className="cursor-pointer hidden lg:block"
             onClick={closebtn}
             src="Assets/cross.svg"
+            alt=""
+          />
+          <img
+            className="cursor-pointer lg:hidden"
+            onClick={closebtn}
+            src="Assets/red-cross.svg"
             alt=""
           />
         </nav>
