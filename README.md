@@ -18,7 +18,7 @@ I am Pinaki Sankar Ray, a final-year student currently pursuing a Bachelor of Te
 
 ## Hosting of the Web App
 
-I chose GOOGLE FIREBASE for hosting the app <img src = "https://w7.pngwing.com/pngs/246/288/png-transparent-firebase-hd-logo-thumbnail.png" height = "40" width = "40"/>
+I chose GOOGLE FIREBASE for hosting the app <img src = "https://w7.pngwing.com/pngs/246/288/png-transparent-firebase-hd-logo-thumbnail.png" height = "40" width = "40"/> <br/>
 Live working web site : - https://unstop-ui-app.web.app/
 
 ## Regards
