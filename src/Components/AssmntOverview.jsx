@@ -181,11 +181,11 @@ const AssmntOverview = ({ openBtn }) => {
                 <img src="Assets/mini-menu.svg" alt="" />
               </nav>
 
-              <h4 className="mt-[10px] font-medium text-[18px] text-[#1C4980] mb-[2px]">
+              <h4 className="mt-[10px] font-medium text-[14px] md:text-[18px] text-[#1C4980] mb-[2px]">
                 {e.name}
               </h4>
               <div className="flex py-1">
-                <p className="text-[14px] font-semibold text-[#1C4980] border-r border-[#DADCE0] pr-[10px]">
+                <p className="text-[12px] md:text-[14px] font-medium md:font-semibold text-[#1C4980] border-r border-[#DADCE0] pr-[10px]">
                   {e.title}
                 </p>
                 <div className="flex gap-[6px] items-center pl-[10px]">
@@ -201,18 +201,18 @@ const AssmntOverview = ({ openBtn }) => {
               <footer className="flex items-center justify-between">
                 <div className="flex w-[123px] justify-between">
                   <div>
-                    <p className="text-[14px] font-semibold text-[#1C4980]">
+                    <p className="text-[12px] md:text-[14px] font-semibold text-[#1C4980]">
                       {e.duration}
                     </p>
-                    <p className="text-[12px] font-medium text-[#1C4980]">
+                    <p className="text-[10px] md:text-[12px] font-medium text-[#1C4980]">
                       Duration
                     </p>
                   </div>
                   <div>
-                    <p className="text-[14px] font-semibold text-[#1C4980]">
+                    <p className="text-[12px] md:text-[14px] font-semibold text-[#1C4980]">
                       {e.questions}
                     </p>
-                    <p className="text-[12px] font-medium text-[#1C4980]">
+                    <p className="text-[10px] md:text-[12px] font-medium text-[#1C4980]">
                       Questions
                     </p>
                   </div>
@@ -221,9 +221,12 @@ const AssmntOverview = ({ openBtn }) => {
                 <div className="flex gap-[10px]">
                   <div className="border-2 border-[#1C4980] rounded-[50px] pl-[6px] gap-[4px] pr-[8px] py-[2px] flex items-center w-fit">
                     <img src="Assets/link-deep.svg" alt="" />
-                    <p>Share</p>
+                    <p className="font-medium text-[12px] md:text-[14px] text-[#1C4980]">Share</p>
                   </div>
+                  <div className="flex items-center">
                   <img src={e.users} alt="" />
+                  <p className="lg:hidden font-semibold text-[12px] text-[#1C4980]">{e.extraUser}</p>
+                  </div>
                 </div>
               </footer>
             </div>
