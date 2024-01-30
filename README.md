@@ -1,70 +1,28 @@
-# Getting Started with Create React App
+# Unstop Frontend Assessment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+I am Pinaki Sankar Ray, a final-year student currently pursuing a Bachelor of Technology (B.Tech) degree in Computer Science and Engineering (CSE). I developed this frontend web app using <img src = "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" height = "25" width = "25"/> (React.js) and <img src = "https://img.icons8.com/color/48/tailwind_css.png" height = "25" width = "25"/> (Tailwind CSS).
 
-## Available Scripts
+## Getting Started with the App
 
-In the project directory, you can run:
+1. Run `npm install` or `npm i` to download the Node modules.
+2. Run `npm start` to start the React app.
 
-### `npm start`
+## Work Done for the Assessment
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. In the main component, I added two sub-components - Side and Main.
+   - The Side component contains the sidebar items, which are fixed in position.
+   - The Main component includes essential components: Nav, Assessment, and AssmntOverview.
+2. The Navbar component contains the navigation items displayed at the top of the screen.
+3. The Assessment component displays user stats, scores, or records of assessments.
+4. The AssmntOverview component consists of the "Add assessment" button card and a list of added assessment cards. I utilized a mapping function for creating assessment cards.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Hosting of the Web App
 
-### `npm test`
+I chose GOOGLE FIREBASE for hosting the app <img src = "https://w7.pngwing.com/pngs/246/288/png-transparent-firebase-hd-logo-thumbnail.png" height = "40" width = "40"/>
+Live working web site : - https://unstop-ui-app.web.app/
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Regards
 
-### `npm run build`
+I approached this assessment by closely following the UI design provided in the Figma file, putting in a lot of effort and passion. The only aspect I couldn't implement was the deactivation of other elements when a side menu or user's stats appear in mobile view. Despite this, the rest of the functionalities work seamlessly. I am committed to improving my skills, and if you consider my work for further processes, I would be grateful.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Thank you for your time and consideration.
